@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".Activity_Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Money Convertor"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/jade_smile"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/firstMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ILS"
+                android:textColor="#8D8E99"
+                android:textSize="30sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="3dp"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/main_EDT_firstMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:background="@color/background"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/changeImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="plus"
+            android:padding="3dp"
+            app:srcCompat="@drawable/up_down" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/secondMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                android:textColor="#8D8E99"
+                android:textSize="30sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="3dp"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/main_EDT_SecMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/BTN_calc"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Calculate"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp"
+            android:layout_marginBottom="35sp" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
