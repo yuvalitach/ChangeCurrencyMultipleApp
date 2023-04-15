@@ -1,4 +1,4 @@
-package com.example.eur;
+package com.example.EUR;
 
 import android.content.Context;
 

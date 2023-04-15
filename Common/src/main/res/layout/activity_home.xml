@@ -68,6 +68,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:contentDescription="plus"
+            android:layout_gravity="center"
             android:padding="3dp"
             app:srcCompat="@drawable/up_down" />
 
@@ -82,7 +83,7 @@
                 android:id="@+id/secondMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EUR"
+                android:text=""
                 android:textColor="#8D8E99"
                 android:textSize="30sp" />
 
@@ -100,7 +101,9 @@
                     android:layout_height="wrap_content"
                     android:background="@color/background"
                     android:textSize="20dp"
+                    android:enabled="false"
                     android:inputType="number"
+                    android:text="0"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp" />
             </com.google.android.material.textfield.TextInputLayout>

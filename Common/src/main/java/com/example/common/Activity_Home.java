@@ -1,6 +1,7 @@
 package com.example.common;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -18,8 +19,13 @@ public class Activity_Home extends AppCompatActivity {
 
     private TextInputEditText mainEDTFirstMoney, mainEDTSecMoney;
     private ExtendedFloatingActionButton calcBtn;
-    private TextView secondMoney, firstMoney;
+    private static TextView secondMoney;
+    private TextView firstMoney;
     ImageView changeImageView;
+
+    private boolean first=false, second=true;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +33,18 @@ public class Activity_Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         findViews();
+
         mainEDTFirstMoney.requestFocus();
 
         // Show the keyboard
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
 
+
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MSP.getInstance().putInt("ILS", Integer.parseInt(String.valueOf(mainEDTFirstMoney.getText())));
-                MSP.getInstance().putInt("SecMoney", Integer.parseInt(String.valueOf(mainEDTSecMoney.getText())));
+                MSP.getInstance().putFloat("ILS", Integer.parseInt(String.valueOf(mainEDTFirstMoney.getText())));
+//                MSP.getInstance().putFloat("SecMoney", Integer.parseInt(String.valueOf(mainEDTSecMoney.getText())));
                 startActivity(new Intent(Activity_Home.this,App_Parent.statsClass));
             }
         });
@@ -51,6 +59,13 @@ public class Activity_Home extends AppCompatActivity {
                 temp = mainEDTFirstMoney.getText().toString();
                 mainEDTFirstMoney.setText(mainEDTSecMoney.getText());
                 mainEDTSecMoney.setText(temp);
+
+
+                mainEDTSecMoney.setEnabled(!second);
+                mainEDTFirstMoney.setEnabled(!first);
+
+                mainEDTFirstMoney.setText("0");
+                mainEDTSecMoney.setText("0");
             }
         });
 

@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_StatsParent"
+    android:background="@drawable/background2"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Money Convertor"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/jade_smile"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="50sp" />
 
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/stats_LBL_save"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:text="Your change is"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="50dp"
+        />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
