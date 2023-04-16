@@ -63,9 +63,6 @@ public class Activity_Home extends AppCompatActivity {
 
                 mainEDTSecMoney.setEnabled(!second);
                 mainEDTFirstMoney.setEnabled(!first);
-
-                mainEDTFirstMoney.setText("0");
-                mainEDTSecMoney.setText("0");
             }
         });
 

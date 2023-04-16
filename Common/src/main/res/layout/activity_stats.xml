@@ -27,7 +27,7 @@
         android:text="Your change is"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="50dp"
+        android:textSize="40dp"
         />
 
 </LinearLayout>

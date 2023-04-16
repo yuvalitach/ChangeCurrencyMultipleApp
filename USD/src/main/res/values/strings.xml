@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">USD</string>
+    <string name="money">USD</string>
 </resources>
